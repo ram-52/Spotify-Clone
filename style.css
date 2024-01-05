@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: var(--pure-black);
+    color: #fff;
+}
+
+
+:root {
+    --pure-black: #000000;
+    --dark-bg1: #181818;
+    --dark-bg2: #282828;
+    --dark-bg3: #535353;
+    --dark-bg-4: #656565;
+    --white-color: #f9fffa;
+    --light-green: #1ed760;
+}
+
+
+.home-and-search {
+    background-color: var(--dark-bg1);
+    color: #fff;
+}
+
+.your-library {
+    background-color: var(--dark-bg1);
+    color: #fff;   
+}
+
+.fa-plus:hover, .fa-arrow-right:hover {
+    background-color: var(--dark-bg2);
+
+}
+
+.create-your-first-playlist {
+    background-color: var(--dark-bg2);
+}
+
+.create-your-first-playlist button:hover {
+    transform: scale(1.05);
+}
+
+
+main {
+    background-color: var(--dark-bg1);
+}
+
+header {
+    transition: all 0.5s ease-in;
+}
+
+.bg-purple {
+    background-color: #040406;
+}
+
+
+
+/* Popular Artist Section */
+.popular-artist-section>div {
+    background-color: var(--dark-bg2);
+    transition: all 0.3s ease-in;
+}
+.popular-artist-section>div:hover {
+    background-color: #2C3539;
+}
+
+.popular-artist-section>div:hover::after {
+    content: '\f144';
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    font-size: 60px;
+    color: var(--light-green);
+}
+
+
+
+/* Categories Section */
+.categories-section>div {
+    background-color: var(--dark-bg2);
+    transition: all 0.3s ease-in;
+}
+.categories-section>div:hover {
+    background-color: #2C3539;
+}
+
+/* Popular Albums Section */
+.popular-albums-section>div {
+    background-color: var(--dark-bg2);
+    transition: all 0.3s ease-in;
+}
+.popular-albums-section>div:hover {
+    background-color: #2C3539;
+}
+
+.popular-albums-section>div:hover::after {
+    content: '\f144';
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    font-size: 60px;
+    color: var(--light-green);
+}
+
+/* Podcasts and Shows Section */
+.podcasts-section>div {
+    background-color: var(--dark-bg2);
+    transition: all 0.3s ease-in;
+}
+.podcasts-section>div:hover {
+    background-color: #2C3539;
+}
+
+
+
+/* Footer Styling */
+ .social-link {
+    background-color: var(--dark-bg2);
+    /* color: red; */
+}
+
+.social-link:hover {
+    background-color: grey;
+}
+
+
+
+/* Search Bar Styling */
+form input:hover {
+    /* background-color: red; */
+    border: 1px solid white;
+}
+
+form input:focus {
+    border: 3px solid white;
+    outline: none;
+}
+
+
+/* Search Results Section Styling */
+.left-card {
+    background-color: var(--dark-bg2);
+    transition: all 0.3s ease-in;
+}
+
+.left-card:hover:after {
+    content: '\f144';
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 160px;
+    right: 25px;
+    font-size: 60px;
+    color: var(--light-green);   
+}
+
+.left-card:hover {
+    background-color: #383838;
+}
+
+.right-card>div:hover {
+    background-color: #383838;
+}

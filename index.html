@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/59aeb3d922.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="home-and-search w-[350px] absolute top-2 left-2 rounded-lg p-6">
+        <!-- <i class="fa-solid fa-house"></i> -->
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+        <div class="flex gap-4 cursor-pointe">
+            <i class="fa-solid fa-house text-xl"></i><a class="hover:underline">Home</a>
+        </div>
+        <div id="search" class="flex search gap-4 mt-4 cursor-pointer opacity-75">
+            <i class="fa-solid fa-magnifying-glass text-xl"></i><a class="hover:underline">Search</a>
+        </div>
+    </div>
+
+    <!-- Your Library Section -->
+    <section class="your-library p-2 absolute w-[350px] h-[500px] left-2 top-[150px] rounded-lg">
+        <div class="flex justify-around text-lg">
+            <div class="opacity-75 hover:opacity-100 hover:cursor-pointer">
+                <i class="fa-solid fa-book-open"></i>
+                <span class="ml-3">Your Library</span>
+            </div>
+            <div class="opacity-75 hover:cursor-pointer flex">
+                <i class="fa-solid fa-plus w-[25px] h-[25px] rounded-[50%] flex justify-center items-center"></i>
+                <i
+                    class="fa-solid fa-arrow-right ml-3  w-[25px] h-[25px] rounded-[50%] flex justify-center items-center"></i>
+            </div>
+        </div>
+
+        <div class="create-your-first-playlist flex flex-col items-start p-4 rounded-lg mt-4 gap-2">
+            <h4 class="font-extrabold">Create your first playlist</h4>
+            <p class="text-sm">It's easy, we'll help you</p>
+            <button class="text-black bg-white px-4 py-2 rounded-3xl font-extrabold mt-4">Create playlist</button>
+        </div>
+        <div class="create-your-first-playlist flex flex-col items-start p-4 rounded-lg mt-4 gap-2">
+            <h4 class="font-extrabold">Lets find some podcasts to follow</h4>
+            <p class="text-sm">We'll keep you updated on new episodes</p>
+            <button class="text-black bg-white px-4 py-2 rounded-3xl font-extrabold mt-4">Browse podcasts</button>
+        </div>
+    </section>
+
+    <!-- main section -->
+    <main class="relative top-2 left-[380px] h-[640px] rounded-lg w-[1135px] px-0 overflow-y-scroll overflow-x-hidden">
+        <header id="header" class="z-50 flex justify-between sticky top-0 py-4 px-8 overflow-hidden">
+            <div class="flex gap-3">
+                <i
+                    class="fa-solid fa-chevron-left cursor-not-allowed flex justify-center items-center w-[40px] h-[40px] bg-black rounded-[50%]"></i>
+                <i
+                    class="fa-solid fa-chevron-right cursor-not-allowed flex justify-center items-center w-[40px] h-[40px] bg-black rounded-[50%]"></i>
+            </div>
+
+            <form action="" class="absolute hidden top-4 left-[135px]">
+                <i class="fa-solid fa-magnifying-glass absolute top-2 left-4 opacity-50 text-lg"></i>
+                <input type="text" class="bg-gray-700 px-12 text-sm rounded-3xl h-[45px] w-[350px] text-inherit"
+                    placeholder="What do you want to listen to?">
+            </form>
+
+            <div class="flex gap-2">
+                <button class="text-black bg-white px-4 py-2 rounded-3xl font-extrabold text-sm hover:scale-105">Explore
+                    Premium</button>
+                <button class="text-white hover:scale-105 bg-black px-4 py-2 rounded-3xl font-extrabold text-sm"><i
+                        class="fa-solid fa-circle-arrow-down"></i> Install App</button>
+                <i
+                    class="fa-solid fa-bell hover:scale-105 flex justify-center items-center w-[40px] h-[40px] bg-black rounded-[50%]"></i>
+                <i
+                    class="fa-regular fa-user hover:scale-105 flex justify-center items-center w-[40px] h-[40px] bg-black rounded-[50%]"></i>
+            </div>
+        </header>
+        <div id="main-data" class="mt-12 px-4">
+
+            <!-- Popular Artist Section -->
+            <div class="flex justify-between">
+                <a class="font-extrabold text-xl my-3 block hover:underline cursor-pointer">Popular artists</a>
+                <a class="font-extrabold text-xs opacity-75 my-3 block hover:underline cursor-pointer">Show all</a>
+            </div>
+            <div id="popular-artist-section" class="popular-artist-section flex justify-between">                
+            </div>
+
+            <!-- Categories Section -->
+            <div class="flex justify-between mt-6">
+                <a class="font-extrabold text-xl my-3 block hover:underline cursor-pointer">Categories</a>
+                <a class="font-extrabold text-xs opacity-75 my-3 block hover:underline cursor-pointer">Show all</a>
+            </div>
+            <div id="categories-section" class="categories-section flex justify-between">
+               
+            </div>
+
+            <!-- Popular Albums Section -->
+            <div class="flex justify-between mt-6">
+                <a class="font-extrabold text-xl my-3 block hover:underline cursor-pointer">Popular albums</a>
+                <a class="font-extrabold text-xs opacity-75 my-3 block hover:underline cursor-pointer">Show all</a>
+            </div>
+            <div id="popular-albums-section" class="popular-albums-section flex justify-between">
+                
+            </div>
+
+            <!-- Podcasts & Show to try Section -->
+            <div class="flex justify-between mt-6">
+                <a class="font-extrabold text-xl my-3 block hover:underline cursor-pointer">Podcasts & Shows</a>
+                <a class="font-extrabold text-xs opacity-75 my-3 block hover:underline cursor-pointer">Show all</a>
+            </div>
+            <div id="podcasts-section" class="podcasts-section flex justify-between">
+               
+            </div>          
+
+
+        </div>
+
+        <!-- Search Result Section -->
+        <div id="searchResultTopParent" class="hidden">
+            <h2 class="text-xl font-extrabold ml-6">Top result</h2>
+            <div class="flex justify-between">
+                <div class="left-card relative hover:cursor-pointer mt-4 ml-8 p-8 rounded-md basis-[45%]">
+                    <!-- <img class="w-[120px] h-[120px] object-cover rounded-lg" src="https://m.media-amazon.com/images/M/MV5BOTk4ZDQ1ZTctNzU3MC00NmY4LWJjMzItNDMwZTA2ODhiYWM5XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_.jpg" alt="">
+                    <h1 class="text-3xl mt-2 font-extrabold">Sultan</h1>
+                    <div class="flex gap-2 mt-2">
+                        <p class="text-sm font-bold hover:underline">Vishal-Shekhar</p>
+                        <p class="text-sm bg-black font-extrabold rounded-2xl px-3 py-1">Album</p>
+                    </div> -->
+                </div>
+                <div class="right-card basis-[45%] flex flex-col justify-between mt-4 mr-8">
+                    <!-- <div class="songs flex gap-2 my-3 p-2 rounded-lg relative hover:cursor-pointer">
+                        <img class="w-[40px] h-[40px] object-cover rounded-sm" src="https://m.media-amazon.com/images/M/MV5BOTk4ZDQ1ZTctNzU3MC00NmY4LWJjMzItNDMwZTA2ODhiYWM5XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_.jpg" alt="">
+                        <div class="flex flex-col gap-1 text-sm">
+                            <a>Sultan</a>
+                            <a class="opacity-50"><span>Ananya Bhat</span>, <span>Mohan Krishna</span>, <span>Santhosh Venky</span></a>
+                        </div>
+                        <div class="time text-sm absolute top-4 right-2 opacity-50">3:37</div>
+                    </div>
+                   
+                    <div class="songs flex gap-2 my-3 p-2 rounded-lg relative hover:cursor-pointer">
+                        <img class="w-[40px] h-[40px] object-cover rounded-sm" src="https://m.media-amazon.com/images/M/MV5BOTk4ZDQ1ZTctNzU3MC00NmY4LWJjMzItNDMwZTA2ODhiYWM5XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_.jpg" alt="">
+                        <div class="flex flex-col gap-1 text-sm">
+                            <a>Sultan</a>
+                            <a class="opacity-50"><span>Ananya Bhat</span>, <span>Mohan Krishna</span>, <span>Santhosh Venky</span></a>
+                        </div>
+                        <div class="time text-sm absolute top-4 right-2 opacity-50">3:37</div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-24 mb-12 px-4 flex justify-between items-start">
+            <div class="flex gap-24">
+                <div class="flex flex-col items-start justify-start gap-3">
+                    <p class="font-extrabold">Company</p>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">About</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Jobs</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">For the Record</a>
+                </div>
+                <div class="flex flex-col items-start justify-start gap-3">
+                    <p class="font-extrabold">Communities</p>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">For Artists</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Developers</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Advertising</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Investors</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Vendors</a>
+                </div>
+                <div class="flex flex-col items-start justify-start gap-3">
+                    <p class="font-extrabold">Useful Links</p>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Support</a>
+                    <a href="" class="text-sm opacity-70 hover:underline hover:opacity-100">Free Mobile App</a>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <a href="" class="social-link w-[45px] h-[45px] rounded-[50%] flex justify-center items-center"><i
+                        class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="" class="social-link w-[45px] h-[45px] rounded-[50%] flex justify-center items-center"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="" class="social-link w-[45px] h-[45px] rounded-[50%] flex justify-center items-center"><i
+                        class="fa-brands fa-facebook text-lg"></i></a>
+            </div>
+        </footer>
+        <hr class="opacity-25 mx-4">
+
+        <!-- Subfooter Section -->
+        <div class="mt-12 mb-24 px-4 flex justify-between">
+            <div class="flex gap-3">
+                <a href="" class="opacity-50 hover:opacity-100 text-sm font-extrabold">Legal</a>
+                <a href="" class="opacity-50 hover:opacity-100 text-sm font-extrabold">Privacy Center</a>
+                <a href="" class="opacity-50 hover:opacity-100 text-sm font-extrabold">Privacy Policy</a>
+                <a href="" class="opacity-50 hover:opacity-100 text-sm font-extrabold">Cookies</a>
+                <a href="" class="opacity-50 hover:opacity-100 text-sm font-extrabold">About Ads</a>
+                <a href="" class="opacity-50 hover:opacity-100 text-sm font-extrabold">Accessibility</a>
+            </div>
+            <div class="opacity-50 text-sm font-extrabold">
+                &copy; 2023 Spotify AB
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>
